@@ -9,7 +9,10 @@ function search() {
     return response.json();
   })
   .then(function (data) {
+    var lat = data[0].lat;
+    var lon = data[0].lon;
     console.log(data);
+    console.log(`${lat} + ${lon}`);
   })
 };
 

@@ -8,7 +8,12 @@
 .row {
     padding-left: 3px;
 }
-#search {
+#searchText {
     border-radius: 7px;
     border-color: gray;
+}
+#searchBtn {
+    border: none;
+    background-color: transparent;
+    opacity: 80%;
 }

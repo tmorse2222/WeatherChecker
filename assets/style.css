@@ -8,3 +8,7 @@
 .row {
     padding-left: 3px;
 }
+#search {
+    border-radius: 7px;
+    border-color: gray;
+}

@@ -1,0 +1,7 @@
+:root {
+    --mainColor: rgb(175, 175, 233);
+}
+.jumbotron {
+    background-color: var(--mainColor);
+    padding-bottom: 5px;
+}

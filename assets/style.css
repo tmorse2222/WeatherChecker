@@ -5,3 +5,6 @@
     background-color: var(--mainColor);
     padding-bottom: 5px;
 }
+.row {
+    padding-left: 3px;
+}

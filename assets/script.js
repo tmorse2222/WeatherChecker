@@ -12,6 +12,7 @@ function search() {
     var lat = data[0].lat;
     var lon = data[0].lon;
     var currentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d&units=imperial`
+
    fetch(currentWeather)
    .then(function (response) {
     return response.json();
@@ -33,7 +34,20 @@ function search() {
     $(`#currentHum`).text(`Humidity: ${currentHum}%`);
     console.log(data);
   })
+
+  $.ajax({
+   type: 'GET',
+   dataType: 'json',
+   beforeSend: function(request) {
+     request.setRequestHeader('x-access-token', '2ae3f2bc6ca536ab47458a615379de56');
+   },
+   url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
+   success: function(response) {
+     console.log(response);
+   },
   })
-};
+
+  
+})}
 
 searchBtn.click(search);

@@ -23,10 +23,12 @@ function search() {
     var currentIcon = data.weather[0].icon;
     var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
     var currentTemp = data.main.temp;
+    var currentWind = data.wind.speed;
     document.getElementById(`currentCity`).innerText = currentCity;
     document.getElementById(`currentDay`).innerText = currentDate;
     $(`#currentIcon`).attr(`src`, currentIconURL);
     $(`#currentTemp`).text(currentTemp);
+    $(`#currentWind`).text(`${currentWind} MPH`);
     console.log(data);
   })
   })

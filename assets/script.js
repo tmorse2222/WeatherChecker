@@ -20,8 +20,11 @@ function search() {
     var currentCity = data.name;
     var timestamp = data.dt;
     var currentDate = new Date(timestamp*1000).toDateString();
+    var currentIcon = data.weather[0].icon;
+    var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
     document.getElementById(`currentCity`).innerText = currentCity;
     document.getElementById(`currentDay`).innerText = currentDate;
+    $(`#currentIcon`).attr(`src`, currentIconURL);
     console.log(data);
   })
   })

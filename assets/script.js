@@ -17,7 +17,8 @@ function search() {
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    var currentCity = data.name;
+    document.getElementById(`currentCity`).innerText = currentCity;
   })
   })
 };

@@ -60,18 +60,30 @@ function search() {
     return response.json();
   })
   .then(function (data) {
-    var futureTimestamp = data.list[5].dt;
-    var futureDate = new Date(futureTimestamp*1000).toLocaleDateString();
-    var dayOneIcon = data.list[5].weather[0].icon;
+    var dayOneTimestamp = data.list[8].dt;
+    var dayOneDate = new Date(dayOneTimestamp*1000).toLocaleDateString();
+    var dayOneIcon = data.list[8].weather[0].icon;
     var dayOneIconURL = `http://openweathermap.org/img/w/${dayOneIcon}.png`;
-    var dayOneTemp = data.list[5].main.temp;
-    var dayOneWind = data.list[5].wind.speed;
-    var dayOneHum = data.list[5].main.humidity;
-    $(`#dayOneDate`).text(futureDate);
+    var dayOneTemp = data.list[8].main.temp;
+    var dayOneWind = data.list[8].wind.speed;
+    var dayOneHum = data.list[8].main.humidity;
+    $(`#dayOneDate`).text(dayOneDate);
     $(`#dayOneIcon`).attr(`src`, dayOneIconURL);
     $(`#dayOneTemp`).text(`Temp: ${dayOneTemp} Farenheit`);
     $(`#dayOneWind`).text(`Wind Speed: ${dayOneWind} MPH`);
     $(`#dayOneHum`).text(`Humidity: ${dayOneHum}%`);
+    var dayTwoTimestamp = data.list[16].dt;
+    var dayTwoDate = new Date(dayTwoTimestamp*1000).toLocaleDateString();
+    var dayTwoIcon = data.list[16].weather[0].icon;
+    var dayTwoIconURL = `http://openweathermap.org/img/w/${dayTwoIcon}.png`;
+    var dayTwoTemp = data.list[16].main.temp;
+    var dayTwoWind = data.list[16].wind.speed;
+    var dayTwoHum = data.list[16].main.humidity;
+    $(`#dayTwoDate`).text(dayTwoDate);
+    $(`#dayTwoIcon`).attr(`src`, dayTwoIconURL);
+    $(`#dayTwoTemp`).text(`Temp: ${dayTwoTemp} Farenheit`);
+    $(`#dayTwoWind`).text(`Wind Speed: ${dayTwoWind} MPH`);
+    $(`#dayTwoHum`).text(`Humidity: ${dayTwoHum}%`);
     console.log(data);
   })
 

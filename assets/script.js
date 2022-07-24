@@ -64,8 +64,14 @@ function search() {
     var futureDate = new Date(futureTimestamp*1000).toLocaleDateString();
     var dayOneIcon = data.list[5].weather[0].icon;
     var dayOneIconURL = `http://openweathermap.org/img/w/${dayOneIcon}.png`;
+    var dayOneTemp = data.list[5].main.temp;
+    var dayOneWind = data.list[5].wind.speed;
+    var dayOneHum = data.list[5].main.humidity;
     $(`#dayOneDate`).text(futureDate);
     $(`#dayOneIcon`).attr(`src`, dayOneIconURL);
+    $(`#dayOneTemp`).text(`Temp: ${dayOneTemp} Farenheit`);
+    $(`#dayOneWind`).text(`Wind Speed: ${dayOneWind} MPH`);
+    $(`#dayOneHum`).text(`Humidity: ${dayOneHum}%`);
     console.log(data);
   })
 

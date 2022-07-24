@@ -18,7 +18,11 @@ function search() {
   })
   .then(function (data) {
     var currentCity = data.name;
+    var timestamp = data.dt;
+    var currentDate = new Date(timestamp*1000).toDateString();
     document.getElementById(`currentCity`).innerText = currentCity;
+    document.getElementById(`currentDay`).innerText = currentDate;
+    console.log(data);
   })
   })
 };

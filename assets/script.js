@@ -22,9 +22,11 @@ function search() {
     var currentDate = new Date(timestamp*1000).toDateString();
     var currentIcon = data.weather[0].icon;
     var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
+    var currentTemp = data.main.temp;
     document.getElementById(`currentCity`).innerText = currentCity;
     document.getElementById(`currentDay`).innerText = currentDate;
     $(`#currentIcon`).attr(`src`, currentIconURL);
+    $(`#currentTemp`).text(currentTemp);
     console.log(data);
   })
   })

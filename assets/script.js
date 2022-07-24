@@ -43,11 +43,12 @@ function search() {
    },
    url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
    success: function(response) {
-     console.log(response);
+    var uvIndex = response.result.uv;
+    $(`#uvIndex`).text(`Index: ${uvIndex}`);
    },
   })
 
-  
+
 })}
 
 searchBtn.click(search);

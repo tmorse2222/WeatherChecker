@@ -24,11 +24,13 @@ function search() {
     var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
     var currentTemp = data.main.temp;
     var currentWind = data.wind.speed;
+    var currentHum = data.main.humidity;
     document.getElementById(`currentCity`).innerText = currentCity;
     document.getElementById(`currentDay`).innerText = currentDate;
     $(`#currentIcon`).attr(`src`, currentIconURL);
-    $(`#currentTemp`).text(currentTemp);
-    $(`#currentWind`).text(`${currentWind} MPH`);
+    $(`#currentTemp`).text(`Temp: ${currentTemp} Farenheit`);
+    $(`#currentWind`).text(`Wind Speed: ${currentWind} MPH`);
+    $(`#currentHum`).text(`Humidity: ${currentHum}%`);
     console.log(data);
   })
   })

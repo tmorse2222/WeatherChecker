@@ -11,7 +11,7 @@ function search() {
   .then(function (data) {
     var lat = data[0].lat;
     var lon = data[0].lon;
-    var currentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d`
+    var currentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d&units=imperial`
    fetch(currentWeather)
    .then(function (response) {
     return response.json();

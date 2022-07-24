@@ -60,9 +60,12 @@ function search() {
     return response.json();
   })
   .then(function (data) {
-    var futureTimestamp = data.list[0].dt;
+    var futureTimestamp = data.list[5].dt;
     var futureDate = new Date(futureTimestamp*1000).toLocaleDateString();
+    var dayOneIcon = data.list[5].weather[0].icon;
+    var dayOneIconURL = `http://openweathermap.org/img/w/${dayOneIcon}.png`;
     $(`#dayOneDate`).text(futureDate);
+    $(`#dayOneIcon`).attr(`src`, dayOneIconURL);
     console.log(data);
   })
 

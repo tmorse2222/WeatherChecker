@@ -25,7 +25,7 @@ function search() {
     var saveItem = document.createElement(`p`);
     var saveValue = localStorage.getItem(`${city}`);
     var saveInfo = `${saveValue} <button class="saveBtn">Return</button>`;
-    
+
     $(saveItem).html(saveInfo);
     $(`#searchResult`).append(saveItem); 
 
@@ -139,3 +139,5 @@ function search() {
 }
 
 searchBtn.click(search);
+$(document).on(`click`, `.saveBtn`, function() {
+  alert(`hello`)});

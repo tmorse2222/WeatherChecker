@@ -4,13 +4,11 @@ var searchBtn = $(`#searchBtn`);
 function search() {
     var city = document.getElementById(`searchText`).value;
     var geocode = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
-    var saveItem = document.createElement(`p`);
-    var saveButton = document.createElement(`button`);
-    var saveValue = document.createTextNode(`${city}`);
 
-    saveItem.appendChild(saveValue)
-    saveItem.appendChild(saveButton);
-    $(`#searchResult`).append(saveItem); 
+
+
+    localStorage.setItem(`${city}`, city)
+
 
 
     fetch(geocode)
@@ -24,6 +22,12 @@ function search() {
     var lon = data[0].lon;
     var currentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d&units=imperial`;
     var fiveDay = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d&units=imperial`;
+    var saveItem = document.createElement(`p`);
+    var saveValue = localStorage.getItem(`${city}`);
+    var saveInfo = `${saveValue} <button class="saveBtn">Return</button>`;
+    
+    $(saveItem).html(saveInfo);
+    $(`#searchResult`).append(saveItem); 
 
    fetch(currentWeather)
 

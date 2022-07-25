@@ -4,6 +4,14 @@ var searchBtn = $(`#searchBtn`);
 function search() {
     var city = document.getElementById(`searchText`).value;
     var geocode = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
+    var saveItem = document.createElement(`p`);
+    var saveButton = document.createElement(`button`);
+    var saveValue = document.createTextNode(`${city}`);
+
+    saveItem.appendChild(saveValue)
+    saveItem.appendChild(saveButton);
+    $(`#searchResult`).append(saveItem); 
+
 
     fetch(geocode)
 

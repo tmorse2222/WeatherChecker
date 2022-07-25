@@ -108,6 +108,18 @@ function search() {
     $(`#dayFourTemp`).text(`Temp: ${dayFourTemp} Farenheit`);
     $(`#dayFourWind`).text(`Wind Speed: ${dayFourWind} MPH`);
     $(`#dayFourHum`).text(`Humidity: ${dayFourHum}%`);
+    var dayFiveTimestamp = data.list[39].dt;
+    var dayFiveDate = new Date(dayFiveTimestamp*1000).toLocaleDateString();
+    var dayFiveIcon = data.list[39].weather[0].icon;
+    var dayFiveIconURL = `http://openweathermap.org/img/w/${dayFiveIcon}.png`;
+    var dayFiveTemp = data.list[39].main.temp;
+    var dayFiveWind = data.list[39].wind.speed;
+    var dayFiveHum = data.list[39].main.humidity;
+    $(`#dayFiveDate`).text(dayFiveDate);
+    $(`#dayFiveIcon`).attr(`src`, dayFiveIconURL);
+    $(`#dayFiveTemp`).text(`Temp: ${dayFiveTemp} Farenheit`);
+    $(`#dayFiveWind`).text(`Wind Speed: ${dayFiveWind} MPH`);
+    $(`#dayFiveHum`).text(`Humidity: ${dayFiveHum}%`);
     console.log(data);
   })
 

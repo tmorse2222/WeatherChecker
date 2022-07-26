@@ -24,10 +24,17 @@ function search() {
     var fiveDay = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=ad2ab0eea4f63232dfe1a7f79251420d&units=imperial`;
     var saveItem = document.createElement(`p`);
     var saveValue = localStorage.getItem(`${city}`);
-    var saveInfo = `${saveValue} <button class="saveBtn">Return</button>`;
-
+    var saveInfo = `${saveValue}`;
+    var saveButton = document.createElement(`p`);
+    var returnButton = `<button class="saveBtn">Return</button>`;
+    var contain = document.createElement(`div`);
+   
     $(saveItem).html(saveInfo);
-    $(`#searchResult`).append(saveItem); 
+    $(saveItem).attr(`class`, `saveCity`)
+    $(saveButton).html(returnButton);
+    $(contain).append(saveItem);
+    $(contain).append(saveButton);
+    $(`#searchResult`).append(contain); 
 
    fetch(currentWeather)
 
@@ -53,18 +60,18 @@ function search() {
     console.log(data);
   })
 
-  $.ajax({
-   type: 'GET',
-   dataType: 'json',
-   beforeSend: function(request) {
-     request.setRequestHeader('x-access-token', '2ae3f2bc6ca536ab47458a615379de56');
-   },
-   url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
-   success: function(response) {
-    var uvIndex = response.result.uv;
-    $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
-   },
-  });
+  // $.ajax({
+  //  type: 'GET',
+  //  dataType: 'json',
+  //  beforeSend: function(request) {
+  //    request.setRequestHeader('x-access-token', '2ae3f2bc6ca536ab47458a615379de56');
+  //  },
+  //  url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
+  //  success: function(response) {
+  //   var uvIndex = response.result.uv;
+  //   $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
+  //  },
+  // });
 
   fetch(fiveDay)
 
@@ -140,4 +147,4 @@ function search() {
 
 searchBtn.click(search);
 $(document).on(`click`, `.saveBtn`, function() {
-  alert(`hello`)});
+  alert($(this).parent().parent().children(`.saveCity`).text())});

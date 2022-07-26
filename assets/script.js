@@ -30,12 +30,13 @@ function search() {
     var contain = document.createElement(`div`);
    
     $(saveItem).html(saveInfo);
-    $(saveItem).attr(`class`, `saveCity`)
+    $(saveItem).attr(`class`, `saveCity col-6`)
     $(saveButton).html(returnButton);
+    $(saveButton).attr(`class`, `col-6`)
     $(contain).append(saveItem);
     $(contain).append(saveButton);
     $(`#searchResult`).append(contain); 
-    $(contain).attr(`class`, `saveContain`);
+    $(contain).attr(`class`, `saveContain row`);
 
    fetch(currentWeather)
 
@@ -297,11 +298,12 @@ $(document).ready( function() {
     var returnButton = `<button class="saveBtn">Return</button>`;
     var contain = document.createElement(`div`);
     $(saveItem).html(saveInfo);
-    $(saveItem).attr(`class`, `saveCity`)
+    $(saveItem).attr(`class`, `saveCity col-6`)
+    $(saveButton).attr(`class`, `col-6`)
     $(saveButton).html(returnButton);
     $(contain).append(saveItem);
     $(contain).append(saveButton);
-    $(contain).attr(`class`, `saveContain`);
+    $(contain).attr(`class`, `saveContain row`);
     $(`#searchResult`).append(contain); 
   }
 })

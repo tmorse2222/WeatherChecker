@@ -70,6 +70,13 @@ function search() {
    success: function(response) {
     var uvIndex = response.result.uv;
     $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
+    if (uvIndex < 3) {
+      $(`#uvIndex`).attr(`class`, `success`)
+    } else if (uvIndex < 6) {
+      $(`#uvIndex`).attr(`class`, `warning`)
+    } else {
+      $(`#uvIndex`).attr(`class`, `danger`)
+    };
    },
   });
 
@@ -197,6 +204,13 @@ $(document).on(`click`, `.saveBtn`, function() {
     success: function(response) {
      var uvIndex = response.result.uv;
      $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
+     if (uvIndex < 3) {
+      $(`#uvIndex`).attr(`class`, `success`)
+    } else if (uvIndex < 6) {
+      $(`#uvIndex`).attr(`class`, `warning`)
+    } else {
+      $(`#uvIndex`).attr(`class`, `danger`)
+    };
     },
    });
  

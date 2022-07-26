@@ -17,3 +17,12 @@
     background-color: transparent;
     opacity: 80%;
 }
+.success {
+    background-color: green;
+}
+.warning {
+    background-color: yellow;
+}
+.danger {
+    background-color: red;
+}

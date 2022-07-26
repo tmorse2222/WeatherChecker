@@ -3,7 +3,7 @@ var searchBtn = $(`#searchBtn`);
 
 function search() {
     var city = document.getElementById(`searchText`).value;
-    var geocode = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
+    var geocode = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
 
 
 
@@ -49,7 +49,7 @@ function search() {
     var timestamp = data.dt;
     var currentDate = new Date(timestamp*1000).toDateString();
     var currentIcon = data.weather[0].icon;
-    var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
+    var currentIconURL = `https://openweathermap.org/img/w/${currentIcon}.png`;
     var currentTemp = data.main.temp;
     var currentWind = data.wind.speed;
     var currentHum = data.main.humidity;
@@ -91,7 +91,7 @@ function search() {
     var dayOneTimestamp = data.list[8].dt;
     var dayOneDate = new Date(dayOneTimestamp*1000).toLocaleDateString();
     var dayOneIcon = data.list[8].weather[0].icon;
-    var dayOneIconURL = `http://openweathermap.org/img/w/${dayOneIcon}.png`;
+    var dayOneIconURL = `https://openweathermap.org/img/w/${dayOneIcon}.png`;
     var dayOneTemp = data.list[8].main.temp;
     var dayOneWind = data.list[8].wind.speed;
     var dayOneHum = data.list[8].main.humidity;
@@ -103,7 +103,7 @@ function search() {
     var dayTwoTimestamp = data.list[16].dt;
     var dayTwoDate = new Date(dayTwoTimestamp*1000).toLocaleDateString();
     var dayTwoIcon = data.list[16].weather[0].icon;
-    var dayTwoIconURL = `http://openweathermap.org/img/w/${dayTwoIcon}.png`;
+    var dayTwoIconURL = `https://openweathermap.org/img/w/${dayTwoIcon}.png`;
     var dayTwoTemp = data.list[16].main.temp;
     var dayTwoWind = data.list[16].wind.speed;
     var dayTwoHum = data.list[16].main.humidity;
@@ -115,7 +115,7 @@ function search() {
     var dayThreeTimestamp = data.list[24].dt;
     var dayThreeDate = new Date(dayThreeTimestamp*1000).toLocaleDateString();
     var dayThreeIcon = data.list[24].weather[0].icon;
-    var dayThreeIconURL = `http://openweathermap.org/img/w/${dayThreeIcon}.png`;
+    var dayThreeIconURL = `https://openweathermap.org/img/w/${dayThreeIcon}.png`;
     var dayThreeTemp = data.list[24].main.temp;
     var dayThreeWind = data.list[24].wind.speed;
     var dayThreeHum = data.list[24].main.humidity;
@@ -127,7 +127,7 @@ function search() {
     var dayFourTimestamp = data.list[32].dt;
     var dayFourDate = new Date(dayFourTimestamp*1000).toLocaleDateString();
     var dayFourIcon = data.list[32].weather[0].icon;
-    var dayFourIconURL = `http://openweathermap.org/img/w/${dayFourIcon}.png`;
+    var dayFourIconURL = `https://openweathermap.org/img/w/${dayFourIcon}.png`;
     var dayFourTemp = data.list[32].main.temp;
     var dayFourWind = data.list[32].wind.speed;
     var dayFourHum = data.list[32].main.humidity;
@@ -139,7 +139,7 @@ function search() {
     var dayFiveTimestamp = data.list[39].dt;
     var dayFiveDate = new Date(dayFiveTimestamp*1000).toLocaleDateString();
     var dayFiveIcon = data.list[39].weather[0].icon;
-    var dayFiveIconURL = `http://openweathermap.org/img/w/${dayFiveIcon}.png`;
+    var dayFiveIconURL = `https://openweathermap.org/img/w/${dayFiveIcon}.png`;
     var dayFiveTemp = data.list[39].main.temp;
     var dayFiveWind = data.list[39].wind.speed;
     var dayFiveHum = data.list[39].main.humidity;
@@ -160,7 +160,7 @@ searchBtn.click(search);
 
 $(document).on(`click`, `.saveBtn`, function() {
   var city = $(this).parent().parent().children(`.saveCity`).text();
-  var geocode = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
+  var geocode = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=ad2ab0eea4f63232dfe1a7f79251420d`;
 
   fetch(geocode)
 
@@ -184,7 +184,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var timestamp = data.dt;
      var currentDate = new Date(timestamp*1000).toDateString();
      var currentIcon = data.weather[0].icon;
-     var currentIconURL = `http://openweathermap.org/img/w/${currentIcon}.png`;
+     var currentIconURL = `https://openweathermap.org/img/w/${currentIcon}.png`;
      var currentTemp = data.main.temp;
      var currentWind = data.wind.speed;
      var currentHum = data.main.humidity;
@@ -226,7 +226,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var dayOneTimestamp = data.list[8].dt;
      var dayOneDate = new Date(dayOneTimestamp*1000).toLocaleDateString();
      var dayOneIcon = data.list[8].weather[0].icon;
-     var dayOneIconURL = `http://openweathermap.org/img/w/${dayOneIcon}.png`;
+     var dayOneIconURL = `https://openweathermap.org/img/w/${dayOneIcon}.png`;
      var dayOneTemp = data.list[8].main.temp;
      var dayOneWind = data.list[8].wind.speed;
      var dayOneHum = data.list[8].main.humidity;
@@ -238,7 +238,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var dayTwoTimestamp = data.list[16].dt;
      var dayTwoDate = new Date(dayTwoTimestamp*1000).toLocaleDateString();
      var dayTwoIcon = data.list[16].weather[0].icon;
-     var dayTwoIconURL = `http://openweathermap.org/img/w/${dayTwoIcon}.png`;
+     var dayTwoIconURL = `https://openweathermap.org/img/w/${dayTwoIcon}.png`;
      var dayTwoTemp = data.list[16].main.temp;
      var dayTwoWind = data.list[16].wind.speed;
      var dayTwoHum = data.list[16].main.humidity;
@@ -250,7 +250,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var dayThreeTimestamp = data.list[24].dt;
      var dayThreeDate = new Date(dayThreeTimestamp*1000).toLocaleDateString();
      var dayThreeIcon = data.list[24].weather[0].icon;
-     var dayThreeIconURL = `http://openweathermap.org/img/w/${dayThreeIcon}.png`;
+     var dayThreeIconURL = `https://openweathermap.org/img/w/${dayThreeIcon}.png`;
      var dayThreeTemp = data.list[24].main.temp;
      var dayThreeWind = data.list[24].wind.speed;
      var dayThreeHum = data.list[24].main.humidity;
@@ -262,7 +262,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var dayFourTimestamp = data.list[32].dt;
      var dayFourDate = new Date(dayFourTimestamp*1000).toLocaleDateString();
      var dayFourIcon = data.list[32].weather[0].icon;
-     var dayFourIconURL = `http://openweathermap.org/img/w/${dayFourIcon}.png`;
+     var dayFourIconURL = `https://openweathermap.org/img/w/${dayFourIcon}.png`;
      var dayFourTemp = data.list[32].main.temp;
      var dayFourWind = data.list[32].wind.speed;
      var dayFourHum = data.list[32].main.humidity;
@@ -274,7 +274,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      var dayFiveTimestamp = data.list[39].dt;
      var dayFiveDate = new Date(dayFiveTimestamp*1000).toLocaleDateString();
      var dayFiveIcon = data.list[39].weather[0].icon;
-     var dayFiveIconURL = `http://openweathermap.org/img/w/${dayFiveIcon}.png`;
+     var dayFiveIconURL = `https://openweathermap.org/img/w/${dayFiveIcon}.png`;
      var dayFiveTemp = data.list[39].main.temp;
      var dayFiveWind = data.list[39].wind.speed;
      var dayFiveHum = data.list[39].main.humidity;

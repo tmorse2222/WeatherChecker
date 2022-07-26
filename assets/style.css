@@ -32,3 +32,6 @@
 .weather {
     display: none;
 }
+#currentIcon {
+    min-width: 100px;
+}

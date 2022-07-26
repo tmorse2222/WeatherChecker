@@ -35,6 +35,7 @@ function search() {
     $(contain).append(saveItem);
     $(contain).append(saveButton);
     $(`#searchResult`).append(contain); 
+    $(contain).attr(`class`, `saveContain`);
 
    fetch(currentWeather)
 
@@ -284,4 +285,26 @@ $(document).on(`click`, `.saveBtn`, function() {
    })
  
  })
+})
+$(document).ready( function() {
+  for (let i = 0; i < localStorage.length; i++ ) {
+    var saveItem = document.createElement(`p`);
+    var saveValue = localStorage.key(i);
+    var saveInfo = `${saveValue}`;
+    var saveButton = document.createElement(`p`);
+    var returnButton = `<button class="saveBtn">Return</button>`;
+    var contain = document.createElement(`div`);
+    $(saveItem).html(saveInfo);
+    $(saveItem).attr(`class`, `saveCity`)
+    $(saveButton).html(returnButton);
+    $(contain).append(saveItem);
+    $(contain).append(saveButton);
+    $(contain).attr(`class`, `saveContain`);
+    $(`#searchResult`).append(contain); 
+  }
+})
+$(`#clearBtn`).click( function () {
+    $(`#searchResult`).children(`div`).remove();
+  localStorage.clear;
+
 })

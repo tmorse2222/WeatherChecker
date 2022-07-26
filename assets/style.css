@@ -1,23 +1,29 @@
+/* Root Variables */
 :root {
     --mainColor: rgb(175, 175, 233);
 }
+/* Style for header */
 .jumbotron {
     background-color: var(--mainColor);
     padding-bottom: 5px;
 }
-.row {
-    padding-left: 3px;
-}
+/* Style for search input field */
 #searchText {
     border-radius: 7px;
     border-color: gray;
     background-color: var(--mainColor);
 }
+.search {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+/* Style for search button */
 #searchBtn {
     border: none;
     background-color: transparent;
     opacity: 80%;
 }
+/* Styles for UV alert color */
 .success {
     background-color: rgb(24, 207, 24);
 }
@@ -27,31 +33,36 @@
 .danger {
     background-color: rgb(255, 74, 74);
 }
-
-.weather {
-    display: none;
-}
+/* Style to enlarge weather icon for current day */
 #currentIcon {
     min-width: 100px;
 }
+/* Styles for weather area */
 .days {
     border: 2px solid var(--mainColor);
 }
 .forcast {
     padding-left: 5px;
 }
-.search {
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
+/* Styles for search history */
 .saveContain {
     padding-top: 3px;
 }
+/* Styles for return buttons */
 .saveBtn {
     background-color: var(--mainColor);
     border-radius: 7px;
 }
+/* Style for clear button */
 #clearBtn {
     background-color: var(--mainColor);
     border-radius: 7px;
+}
+/* Style to hide elements on page load */
+.weather {
+    display: none;
+}
+/* Boot strap style edit */
+.row {
+    padding-left: 3px;
 }

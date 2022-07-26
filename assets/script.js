@@ -147,4 +147,6 @@ function search() {
 
 searchBtn.click(search);
 $(document).on(`click`, `.saveBtn`, function() {
-  alert($(this).parent().parent().children(`.saveCity`).text())});
+  var city = $(this).parent().parent().children(`.saveCity`).text();
+  alert(city)
+});

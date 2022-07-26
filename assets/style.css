@@ -11,6 +11,7 @@
 #searchText {
     border-radius: 7px;
     border-color: gray;
+    background-color: var(--mainColor);
 }
 #searchBtn {
     border: none;
@@ -44,4 +45,12 @@
 }
 .saveContain {
     padding-top: 3px;
+}
+.saveBtn {
+    background-color: var(--mainColor);
+    border-radius: 7px;
+}
+#clearBtn {
+    background-color: var(--mainColor);
+    border-radius: 7px;
 }

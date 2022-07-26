@@ -26,12 +26,16 @@
 .danger {
     background-color: red;
 }
-.today {
-    border: 2px solid var(--mainColor);
-}
+
 .weather {
     display: none;
 }
 #currentIcon {
     min-width: 100px;
+}
+.days {
+    border: 2px solid var(--mainColor);
+}
+.forcast {
+    padding-left: 5px;
 }

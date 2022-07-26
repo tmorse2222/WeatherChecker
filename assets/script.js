@@ -307,6 +307,6 @@ $(document).ready( function() {
 })
 $(`#clearBtn`).click( function () {
     $(`#searchResult`).children(`div`).remove();
-  localStorage.clear;
+  localStorage.clear();
 
 })

@@ -26,3 +26,9 @@
 .danger {
     background-color: red;
 }
+.today {
+    border: 2px solid var(--mainColor);
+}
+.weather {
+    display: none;
+}

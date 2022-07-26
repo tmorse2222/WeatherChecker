@@ -148,6 +148,7 @@ function search() {
     $(`#dayFiveWind`).text(`Wind Speed: ${dayFiveWind} MPH`);
     $(`#dayFiveHum`).text(`Humidity: ${dayFiveHum}%`);
     console.log(data);
+    document.querySelector(`.weather`).style.display = `unset`;
   })
 
 })
@@ -282,6 +283,7 @@ $(document).on(`click`, `.saveBtn`, function() {
      $(`#dayFiveWind`).text(`Wind Speed: ${dayFiveWind} MPH`);
      $(`#dayFiveHum`).text(`Humidity: ${dayFiveHum}%`);
      console.log(data);
+     document.querySelector(`.weather`).style.display = `unset`;
    })
  
  })

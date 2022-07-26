@@ -62,25 +62,25 @@ function search() {
     console.log(data);
   })
 
-  // $.ajax({
-  //  type: 'GET',
-  //  dataType: 'json',
-  //  beforeSend: function(request) {
-  //    request.setRequestHeader('x-access-token', '2ae3f2bc6ca536ab47458a615379de56');
-  //  },
-  //  url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
-  //  success: function(response) {
-  //   var uvIndex = response.result.uv;
-  //   $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
-  //   if (uvIndex < 3) {
-  //     $(`#uvIndex`).attr(`class`, `success`)
-  //   } else if (uvIndex < 6) {
-  //     $(`#uvIndex`).attr(`class`, `warning`)
-  //   } else {
-  //     $(`#uvIndex`).attr(`class`, `danger`)
-  //   };
-  //  },
-  // });
+  $.ajax({
+   type: 'GET',
+   dataType: 'json',
+   beforeSend: function(request) {
+     request.setRequestHeader('x-access-token', '2ae3f2bc6ca536ab47458a615379de56');
+   },
+   url: `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`,
+   success: function(response) {
+    var uvIndex = response.result.uv;
+    $(`#uvIndex`).text(`UV Index: ${uvIndex}`);
+    if (uvIndex < 3) {
+      $(`#uvIndex`).attr(`class`, `success`)
+    } else if (uvIndex < 6) {
+      $(`#uvIndex`).attr(`class`, `warning`)
+    } else {
+      $(`#uvIndex`).attr(`class`, `danger`)
+    };
+   },
+  });
 
   fetch(fiveDay)
 

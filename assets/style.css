@@ -19,13 +19,13 @@
     opacity: 80%;
 }
 .success {
-    background-color: green;
+    background-color: rgb(24, 207, 24);
 }
 .warning {
-    background-color: yellow;
+    background-color: rgb(255, 255, 102);
 }
 .danger {
-    background-color: red;
+    background-color: rgb(255, 74, 74);
 }
 
 .weather {

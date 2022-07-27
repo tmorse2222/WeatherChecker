@@ -22,6 +22,6 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history<br>
 THEN I am again presented with current and future conditions for that city<br>
 <br>
-This challenge tasked us with creating a weather application that is capable of retrieving data from third-party servers. All documents were coded from scratch, featuring the use of bootstrap and custom css for styling and use of Jquery and custom JS to achieve functionality. The application pulls from 4 different third-party APIs; Geocoding, Current weather, and 5 day forcast from openweathermap.org, and UV info from openuv.io.
+This challenge tasked us with creating a weather application that is capable of retrieving data from third-party servers. All documents were coded from scratch, featuring the use of bootstrap and custom css for styling and use of Jquery and custom JS to achieve functionality. The application pulls from 4 different server-side APIs; Geocoding, Current weather, and 5 day forcast from openweathermap.org, and UV info from openuv.io.
 <img src="assets/images/screenshot.png" alt="A screenshot of the deployed application">
 A link to the deployed application can be found <a href="https://tmorse2222.github.io/WeatherChecker/">here</a>

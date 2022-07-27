@@ -105,7 +105,7 @@ function search() {
     // Actions to display data
     $(`#dayOneDate`).text(dayOneDate);
     $(`#dayOneIcon`).attr(`src`, dayOneIconURL);
-    $(`#dayOneTemp`).text(`Temp: ${dayOneTemp} Farenheit`);
+    $(`#dayOneTemp`).text(`Temp: ${dayOneTemp}°`);
     $(`#dayOneWind`).text(`Wind Speed: ${dayOneWind} MPH`);
     $(`#dayOneHum`).text(`Humidity: ${dayOneHum}%`);
     // Var for day 2 of 5
@@ -119,7 +119,7 @@ function search() {
     // Actions to display data
     $(`#dayTwoDate`).text(dayTwoDate);
     $(`#dayTwoIcon`).attr(`src`, dayTwoIconURL);
-    $(`#dayTwoTemp`).text(`Temp: ${dayTwoTemp} Farenheit`);
+    $(`#dayTwoTemp`).text(`Temp: ${dayTwoTemp}°`);
     $(`#dayTwoWind`).text(`Wind Speed: ${dayTwoWind} MPH`);
     $(`#dayTwoHum`).text(`Humidity: ${dayTwoHum}%`);
     // Var for day 3 of 5
@@ -133,7 +133,7 @@ function search() {
     // Actions to display data
     $(`#dayThreeDate`).text(dayThreeDate);
     $(`#dayThreeIcon`).attr(`src`, dayThreeIconURL);
-    $(`#dayThreeTemp`).text(`Temp: ${dayThreeTemp} Farenheit`);
+    $(`#dayThreeTemp`).text(`Temp: ${dayThreeTemp}°`);
     $(`#dayThreeWind`).text(`Wind Speed: ${dayThreeWind} MPH`);
     $(`#dayThreeHum`).text(`Humidity: ${dayThreeHum}%`);
     // Var for day 4 of 5
@@ -147,7 +147,7 @@ function search() {
     // Actions to display data
     $(`#dayFourDate`).text(dayFourDate);
     $(`#dayFourIcon`).attr(`src`, dayFourIconURL);
-    $(`#dayFourTemp`).text(`Temp: ${dayFourTemp} Farenheit`);
+    $(`#dayFourTemp`).text(`Temp: ${dayFourTemp}°`);
     $(`#dayFourWind`).text(`Wind Speed: ${dayFourWind} MPH`);
     $(`#dayFourHum`).text(`Humidity: ${dayFourHum}%`);
     // Var for day 5
@@ -161,7 +161,7 @@ function search() {
     // Actions to display data
     $(`#dayFiveDate`).text(dayFiveDate);
     $(`#dayFiveIcon`).attr(`src`, dayFiveIconURL);
-    $(`#dayFiveTemp`).text(`Temp: ${dayFiveTemp} Farenheit`);
+    $(`#dayFiveTemp`).text(`Temp: ${dayFiveTemp}°`);
     $(`#dayFiveWind`).text(`Wind Speed: ${dayFiveWind} MPH`);
     $(`#dayFiveHum`).text(`Humidity: ${dayFiveHum}%`);
     // Action to display all elements on screen
@@ -258,7 +258,7 @@ $(document).on(`click`, `.saveBtn`, function() {
     //  Actions to display info
      $(`#dayOneDate`).text(dayOneDate);
      $(`#dayOneIcon`).attr(`src`, dayOneIconURL);
-     $(`#dayOneTemp`).text(`Temp: ${dayOneTemp} Farenheit`);
+     $(`#dayOneTemp`).text(`Temp: ${dayOneTemp}°`);
      $(`#dayOneWind`).text(`Wind Speed: ${dayOneWind} MPH`);
      $(`#dayOneHum`).text(`Humidity: ${dayOneHum}%`);
     //  Var for day 2
@@ -272,7 +272,7 @@ $(document).on(`click`, `.saveBtn`, function() {
     //  Actions to display data
      $(`#dayTwoDate`).text(dayTwoDate);
      $(`#dayTwoIcon`).attr(`src`, dayTwoIconURL);
-     $(`#dayTwoTemp`).text(`Temp: ${dayTwoTemp} Farenheit`);
+     $(`#dayTwoTemp`).text(`Temp: ${dayTwoTemp}°`);
      $(`#dayTwoWind`).text(`Wind Speed: ${dayTwoWind} MPH`);
      $(`#dayTwoHum`).text(`Humidity: ${dayTwoHum}%`);
     //  Var for day 3
@@ -286,7 +286,7 @@ $(document).on(`click`, `.saveBtn`, function() {
     //  Actions to display data
      $(`#dayThreeDate`).text(dayThreeDate);
      $(`#dayThreeIcon`).attr(`src`, dayThreeIconURL);
-     $(`#dayThreeTemp`).text(`Temp: ${dayThreeTemp} Farenheit`);
+     $(`#dayThreeTemp`).text(`Temp: ${dayThreeTemp}°`);
      $(`#dayThreeWind`).text(`Wind Speed: ${dayThreeWind} MPH`);
      $(`#dayThreeHum`).text(`Humidity: ${dayThreeHum}%`);
     //  Var for day 4
@@ -300,7 +300,7 @@ $(document).on(`click`, `.saveBtn`, function() {
     //  Actions to display data
      $(`#dayFourDate`).text(dayFourDate);
      $(`#dayFourIcon`).attr(`src`, dayFourIconURL);
-     $(`#dayFourTemp`).text(`Temp: ${dayFourTemp} Farenheit`);
+     $(`#dayFourTemp`).text(`Temp: ${dayFourTemp}°`);
      $(`#dayFourWind`).text(`Wind Speed: ${dayFourWind} MPH`);
      $(`#dayFourHum`).text(`Humidity: ${dayFourHum}%`);
     //  Var for day 5
@@ -314,7 +314,7 @@ $(document).on(`click`, `.saveBtn`, function() {
     //  Actions to display data
      $(`#dayFiveDate`).text(dayFiveDate);
      $(`#dayFiveIcon`).attr(`src`, dayFiveIconURL);
-     $(`#dayFiveTemp`).text(`Temp: ${dayFiveTemp} Farenheit`);
+     $(`#dayFiveTemp`).text(`Temp: ${dayFiveTemp}°`);
      $(`#dayFiveWind`).text(`Wind Speed: ${dayFiveWind} MPH`);
      $(`#dayFiveHum`).text(`Humidity: ${dayFiveHum}%`);
     //  Action to display all elements
